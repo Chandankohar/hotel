@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./Home.module.css";
 
 const Home = () => {
+     const [menuOpen, setMenuOpen] = useState(false);
     const rooms=[
         {
             name:"Deluxe Suite", 
@@ -27,20 +28,24 @@ const Home = () => {
     ]
     return (
         <>
-            <header className={styles.header}>
-                <nav className={styles.nav}>
-                    <div className={styles.logo}>HOTEL</div>
-                    <div className={styles.navLinks}>
-                        <a href="#">Home</a>
-                        <a href="#about">About</a>
-                        <a href="#services">Services</a>
-                        <a href="#rooms">Rooms</a>
-                        <a href="#gallery">Gallery</a>
-                        <a href="#contact">Contact</a>
-                    </div>
-                </nav>
-            </header>
-
+              <header className={styles.header}>
+      <nav className={styles.nav}>
+        <div className={styles.logo}>HOTEL</div>
+        <div className={styles.hamburger} onClick={() => setMenuOpen(!menuOpen)}>
+          <span className={styles.bar}></span>
+          <span className={styles.bar}></span>
+          <span className={styles.bar}></span>
+        </div>
+        <div className={`${styles.navLinks} ${menuOpen ? styles.active : ''}`}>
+          <a href="#">Home</a>
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#rooms">Rooms</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+    </header>
             <section className={styles.hero}>
                 <h1>Luxury Stay</h1>
                 <p>Experience comfort, elegance, and unforgettable moments at our luxury hotel.</p>

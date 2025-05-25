@@ -23,35 +23,38 @@ section {
   padding: 60px 20px;
   text-align: center;
 }
-
-/* Header/Navbar */
 .header {
+  
   position: sticky;
   top: 0;
+  z-index: 1000;  
   background: #111a2a;
   padding: 1rem 3rem;
   z-index: 9999;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
 }
+
 .nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1200px;
-  margin: auto;
+  padding: 1rem 2rem;
 }
+
 .logo {
-  font-size: 1.8rem;
+ font-size: 1.8rem;
   font-weight: 900;
   color: #d4af37;
   letter-spacing: 2px;
   text-transform: uppercase;
   font-family: 'Playfair Display', serif;
 }
+
 .navLinks {
   display: flex;
   gap: 2rem;
 }
+
 .navLinks a {
   font-weight: 600;
   font-size: 1rem;
@@ -60,13 +63,67 @@ section {
   text-transform: uppercase;
   letter-spacing: 1px;
   color: #f0e6c8;
+  transition: color 0.3s ease;
 }
+
 .navLinks a:hover,
 .navLinks a:focus {
   background: #d4af37;
   color: #111a2a;
   box-shadow: 0 0 8px #d4af37aa;
 }
+
+/* Hamburger menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.bar {
+  height: 3px;
+  width: 25px;
+  background-color: #333;
+  margin: 4px 0;
+  transition: 0.3s;
+}
+
+/* Responsive: Mobile */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .navLinks {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: #000000;
+    width: 100%;
+    flex-direction: column;
+    gap: 0;
+    display: none;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  }
+
+  .navLinks a {
+    padding: 1rem 2rem;
+    border-top: 1px solid #eee;
+  }
+
+  .navLinks.active {
+    display: flex;
+  }
+ 
+}
+
+
+/* Header/Navbar */
+
+
+
+
+
 
 /* Hero Section */
 .hero {
@@ -153,6 +210,11 @@ h2 {
   color: #ffffff;
   font-weight: 300;
 }
+@media (max-width: 768px) {
+  .aboutcontent {
+    display: block; /* or inline-block or grid or whatever layout you prefer */
+    gap: 0; /* gap has no effect on block layout */
+  }}
 
 /* Services */
 .serviceItems {
