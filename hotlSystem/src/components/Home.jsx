@@ -5,7 +5,7 @@ const Home = () => {
     const rooms=[
         {
             name:"Deluxe Suite", 
-            link:'http://www.vrajinn.in/img/rooms/deluxe-room.jpg'
+            link:'https://www.maldiveschanthaburi.com/wp-content/uploads/2021/01/Deluxe_Suite_Room_with_Seaview-3.jpg'
 
         },
          {
@@ -15,7 +15,7 @@ const Home = () => {
         },
          {
             name:"Sea View Room", 
-            link:'http://www.vrajinn.in/img/rooms/deluxe-room.jpg'
+            link:'https://en.izu-hamanoyu.co.jp/room/img/room20.jpg'
 
         }
     ]
