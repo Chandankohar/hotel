@@ -128,9 +128,9 @@ const Home = () => {
                  
                 <h2>Contact Us</h2>
 
-                <p>Email: contact@luxhotel.com</p>
-                <p>Phone: +91 9876543210</p>
-                <p>Address: 123 Beachside Road, Goa, India</p>
+                <p>Email: xxxxxx@hotel.com</p>
+                <p>Phone: 0000000000000</p>
+                <p>Address: XXXXXXXXXXXXXXXXXXXX</p>
             </section>
 
             <footer className={styles.footer}>
